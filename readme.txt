@@ -19,7 +19,7 @@ Members can be classified with drag’n drop vertically and horizontally and you
 Check the video demo here: [https://vimeo.com/75430850]
 
 
-**Features for free version**
+**Features for free version**   
 - Add team member in 3 click   
 - Use Team Chart only from the editor    
 - Responsive theme pack   
@@ -30,7 +30,7 @@ Check the video demo here: [https://vimeo.com/75430850]
 - Use existing image from WordPress
 
 
-**PRO version features**
+**PRO version features**   
 - 6 month support   
 - 6 month updates   
 - 2 nice responsive themes   
