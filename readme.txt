@@ -1,7 +1,4 @@
-﻿                                                                     
-                                                                     
-                                                                     
-                                             
+﻿
 === Team Chart ===
 Contributors: WPCode United
 Donate link: 
