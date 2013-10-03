@@ -52,14 +52,8 @@ Just open you content and you'll a button named "Team Chart" at the top left of 
 
 == Screenshots ==
 
-1. http://www.wpcode-united.com/wp-content/uploads/2013/08/1.Default-flow-chart-view.png
-2. http://www.wpcode-united.com/wp-content/uploads/2013/08/2.Circle-theme.png
-3. http://www.wpcode-united.com/wp-content/uploads/2013/08/3.Nature-theme.png
-4. http://www.wpcode-united.com/wp-content/uploads/2013/08/4.Detailled-view-in-default-theme.png
-5. http://www.wpcode-united.com/wp-content/uploads/2013/08/5.Main-interface-in-admin-part.png
-6. http://www.wpcode-united.com/wp-content/uploads/2013/08/6.Edit-team-member.png
-7. http://www.wpcode-united.com/wp-content/uploads/2013/08/7.Crop-image-in-one-click.png
-8. http://www.wpcode-united.com/wp-content/uploads/2013/08/8.Choose-your-theme.png
+/assets/1.png
+/assets/2.png
 
 == Changelog ==
 
