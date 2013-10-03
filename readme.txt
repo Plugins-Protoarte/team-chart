@@ -52,8 +52,8 @@ Just open you content and you'll a button named "Team Chart" at the top left of 
 
 == Screenshots ==
 
-/assets/1.png
-/assets/2.png
+http://plugins.svn.wordpress.org/team-chart/assets/1.png
+http://plugins.svn.wordpress.org/team-chart/assets/2.png
 
 == Changelog ==
 
