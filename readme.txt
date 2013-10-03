@@ -12,7 +12,7 @@ Team Chart is a plugin that helps you to create flow chart easily. Upload images
 
 == Description ==
 
-Team Chart is a WordPress plugin that helps you to create flow chart easily. Indeed usage is quite simple, no more need to go in plugin configuration and go back in your article or page to create a flow chart. Just open a lightbox from your content and start drawing your flow chart. You just need to: create one or some flow chart, send you team pictures, organize the team and insert them in your content. You can also add a working post and a description for each member. Members photo can be center with drag’n drop too.
+**Team Chart** plugin helps you to create flow chart easily. Indeed usage is quite simple, no more need to go in plugin configuration and go back in your article or page to create a flow chart. Just open a lightbox from your content and start drawing your flow chart. You just need to: create one or some flow chart, send you team pictures, organize the team and insert them in your content. You can also add a working post and a description for each member. Members photo can be center with drag’n drop too.
 
 Members can be classified with drag’n drop vertically and horizontally and you can reuse existing member from a flow chart in another with a simple click. A default responsive theme is available plus 2 alternative in the premium version. In premium version you have also the possibility to create multiple flow chart.
 
@@ -52,8 +52,14 @@ Just open you content and you'll a button named "Team Chart" at the top left of 
 
 == Screenshots ==
 
-1. test
-2. test2
+1. Default flow chart view
+2. Circle theme
+3. Nature theme
+4. Detailled view
+5. Main interface admin part
+6. Edit team member
+7. Crop image in one click
+8. Choose your theme
 
 == Changelog ==
 
