@@ -16,7 +16,9 @@ Team Chart is a plugin that helps you to create flow chart easily. Upload images
 
 Members can be classified with drag’n drop vertically and horizontally and you can reuse existing member from a flow chart in another with a simple click. A default responsive theme is available plus 2 alternative in the premium version. In premium version you have also the possibility to create multiple flow chart.
 
-Check the video demo here: http://www.wpcode-united.com/wordpress-plugin/team-chart
+**More details here:** http://www.wpcode-united.com/wordpress-plugin/team-chart
+
+**Video demo:** http://youtu.be/q-W-0W_MJ5I
 
 
 **Features for free version**   
