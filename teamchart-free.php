@@ -2,7 +2,7 @@
 /*
 Plugin Name: Team Chart Lite
 Plugin URI: http://www.wpcode-united.com/wordpress-plugin/team-chart
-Description: Plugin Team chart, generate customized flaw chart easily.
+Description: Team Chart is a plugin that helps you to create flow chart easily. Upload images, description and organize members with drag’n drop.
 Author: WPCode United
 Version: 1.0
 Author URI: http://www.wpcode-united.com
