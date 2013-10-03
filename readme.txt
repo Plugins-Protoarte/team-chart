@@ -21,12 +21,19 @@ Check the video demo here: [http://www.wpcode-united.com/wordpress-plugin/team-c
 
 **Features for free version**
 - Add team member in 3 click
+
 - Use Team Chart only from the editor
+
 - Responsive theme pack
+
 - AJAX ordering
+
 - Nice theme by default
+
 - Move member photo using Drag’n drop
+
 - Add existing member in one click
+
 - Use existing image from WordPress
 
 
