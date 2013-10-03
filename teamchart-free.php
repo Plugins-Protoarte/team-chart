@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Team Chart Lite
+Plugin Name: Team Chart Free
 Plugin URI: http://www.wpcode-united.com/wordpress-plugin/team-chart
 Description: Team Chart is a plugin that helps you to create flow chart easily. Upload images, description and organize members with drag’n drop.
 Author: WPCode United
