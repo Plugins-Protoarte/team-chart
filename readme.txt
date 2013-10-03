@@ -52,8 +52,8 @@ Just open you content and you'll a button named "Team Chart" at the top left of 
 
 == Screenshots ==
 
-1. 1.png
-2. 2.png
+1. test
+2. test2
 
 == Changelog ==
 
