@@ -12,7 +12,7 @@ Stable tag: /trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Team Chart is a plugin that helps you to create flow chart, organizational chart easily. Upload images, description and organize members with drag’n drop.
+Team Chart is a plugin that helps you to create flow chart easily. Upload images, description and organize members with drag’n drop.
 
 == Description ==
 
