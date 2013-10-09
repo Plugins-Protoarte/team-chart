@@ -18,7 +18,7 @@ Members can be classified with drag’n drop vertically and horizontally and you
 
 **More details here:** http://www.wpcode-united.com/wordpress-plugin/team-chart
 
-**Video demo:** [http://youtu.be/q-W-0W_MJ5I]
+**Video demo:** [youtube http://www.youtube.com/watch?v=q-W-0W_MJ5I]
 
 
 **Features for free version**   
