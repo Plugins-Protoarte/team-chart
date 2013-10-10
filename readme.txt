@@ -44,7 +44,7 @@ This plugin will be perfect in addition with contact form or an about us page on
 
 == Installation ==
 
-1. Upload `teamchart-free` to the `/wp-content/plugins/` directory
+1. Upload `teamchart-free` to the `/wp-content/plugins/` directory or use the WordPress standard installer
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Just open a content (page, article or any WYSIWYG editor) and use the "Team Chart" button to edit and add flow charts
 
@@ -67,7 +67,7 @@ Just open you content and you'll a button named "Team Chart" at the top left of 
 
 == Changelog ==
 
-#1.0: Initial release
+* #1.0: Initial release
 
 == Upgrade notice ==
 
