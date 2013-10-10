@@ -1,7 +1,7 @@
 ﻿=== Team Chart ===
 Contributors: WPCode United
 Donate link: 
-Tags: team chart, flow chart, organizational chart, about us, contact us
+Tags: team chart, flow chart, organizational chart, AJAX, links, page, post, contact form, about us, contact us
 Requires at least: 3.5
 Tested up to: 3.6.1
 Stable tag: /trunk 
@@ -15,6 +15,8 @@ Team Chart is a plugin that helps you to create flow chart easily. Upload images
 **Team Chart** plugin helps you to create flow chart easily. Indeed usage is quite simple, no more need to go in plugin configuration and go back in your article or page to create a flow chart. Just open a lightbox from your content and start drawing your flow chart. You just need to: create one or some flow chart, send you team pictures, organize the team and insert them in your content. You can also add a working post and a description for each member. Members photo can be center with drag’n drop too.
 
 Members can be classified with drag’n drop vertically and horizontally and you can reuse existing member from a flow chart in another with a simple click. A default responsive theme is available plus 2 alternative in the premium version. In premium version you have also the possibility to create multiple flow chart.
+
+This plugin will be perfect in addition with contact form or an about us page on your website.
 
 **More details here:** http://www.wpcode-united.com/wordpress-plugin/team-chart
 
