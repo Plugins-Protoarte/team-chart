@@ -67,7 +67,10 @@ Just open you content and you'll a button named "Team Chart" at the top left of 
 
 == Changelog ==
 
-* #1.0: Initial release
+* #1.0.1 : Fixed Fields with double and single quotes.
+
+* #1.0.0 : Initial release.
+
 
 == Upgrade notice ==
 

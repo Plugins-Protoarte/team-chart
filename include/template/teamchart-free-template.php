@@ -64,11 +64,11 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 	    	 	
 	    	 	
 	    	    $result.= "'>	<div class='person'>
-	    	 	  <div class='image'> <img src='".$urlimage[0]."' alt='".$row->name."' /></div>
-	    	 	  <div class='imagefull' style='display:none;'> <img src='".$urlimagefull[0]."' alt='".$row->name."' /></div>
-	    	 	  <div class='text'><div class='name'><p> ".$row->name." </p></div>
-	    	 	  <div class='Job'> ".$row->job."</div>
-	    	 	  <div class='description' style='display:none;'> ".$row->description."</div>
+	    	 	  <div class='image'> <img src='".$urlimage[0]."' alt='".htmlentities(stripslashes($row->name),ENT_QUOTES)."' /></div>
+	    	 	  <div class='imagefull' style='display:none;'> <img src='".$urlimagefull[0]."' alt='".htmlentities(stripslashes($row->name),ENT_QUOTES)."' /></div>
+	    	 	  <div class='text'><div class='name'><p> ".htmlentities(stripslashes($row->name),ENT_QUOTES)." </p></div>
+	    	 	  <div class='Job'> ".htmlentities(stripslashes($row->job),ENT_QUOTES)."</div>
+	    	 	  <div class='description' style='display:none;'> ".htmlentities(stripslashes($row->description),ENT_QUOTES)."</div>
 	    	 	  </div>
 	    	 	  </div>
 	    	 	  ";
@@ -120,11 +120,11 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 	    	 	
 	    	 	
 	    	    $result.= "'>	<div class='person'>
-	    	 	  <div class='image'> <img src='".$urlimage[0]."' alt='".$row->name."' /></div>
-	    	 	  <div class='imagefull' style='display:none;'> <img src='".$urlimagefull[0]."' alt='".$row->name."' /></div>
-	    	 	  <div class='text'><div class='name'><p> ".$row->name." </p></div>
-	    	 	  <div class='Job'> ".$row->job."</div>
-	    	 	  <div class='description' style='display:none;'> ".$row->description."</div>
+	    	 	  <div class='image'> <img src='".$urlimage[0]."' alt='".htmlentities(stripslashes($row->name),ENT_QUOTES)."' /></div>
+	    	 	  <div class='imagefull' style='display:none;'> <img src='".$urlimagefull[0]."' alt='".htmlentities(stripslashes($row->name),ENT_QUOTES)."' /></div>
+	    	 	  <div class='text'><div class='name'><p> ".htmlentities(stripslashes($row->name),ENT_QUOTES)." </p></div>
+	    	 	  <div class='Job'> ".htmlentities(stripslashes($row->job),ENT_QUOTES)."</div>
+	    	 	  <div class='description' style='display:none;'> ".htmlentities(stripslashes($row->description),ENT_QUOTES)."</div>
 	    	 	  </div>
 	    	 	  </div>
 	    	 	  ";

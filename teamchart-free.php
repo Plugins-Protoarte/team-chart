@@ -4,7 +4,7 @@ Plugin Name: Team Chart Free
 Plugin URI: http://www.wpcode-united.com/wordpress-plugin/team-chart
 Description: Team Chart is a plugin that helps you to create flow chart easily. Upload images, description and organize members with drag’n drop.
 Author: WPCode United
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://www.wpcode-united.com
 */
 
@@ -14,15 +14,15 @@ require_once(plugin_dir_path(__FILE__)."/include/template/teamchart-free-templat
 require_once(plugin_dir_path(__FILE__)."/include/admin/teamchart-free-admin-ajax.php");
            
 
-global $team_chart_version;
-$team_chart_version = "1.0";
+global $team_chart_free_version;
+$team_chart_free_version = "1.0.1";
 
 function team_chart_install_free() {
 	
    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
    
    global $wpdb;
-   global $team_chart_version;
+   global $team_chart_free_version;
    
 	// Database PERSON
    $table_name_person = $wpdb->prefix . "team_chart_person";
@@ -66,7 +66,7 @@ function team_chart_install_free() {
    dbDelta( $sql );
    
  
-   add_option( "team_chart_version", $team_chart_version );
+   add_option( "team_chart_free_version", $team_chart_free_version );
 }
 
 
@@ -164,20 +164,18 @@ function teamchart_shortcode_free( $atts ) {
 	}
 	
 	switch($classtheme->theme){
-	 case '1':wp_enqueue_style( 'theme-default', plugins_url('teamchart-free/asset/style/theme-default.css', dirname(__FILE__)) );break;	
-	 case '2':wp_enqueue_style( 'theme-circle', plugins_url('teamchart-free/asset/style/theme-circle.css', dirname(__FILE__)) );break;	
-	 case '3':wp_enqueue_style( 'theme-nature', plugins_url('teamchart-free/asset/style/theme-nature.css', dirname(__FILE__)) );break;	
+	 case '1':wp_enqueue_style( 'theme-default', plugin_dir_url(__FILE__).'asset/style/theme-default.css' );break;	
+	 case '2':wp_enqueue_style( 'theme-circle', plugin_dir_url(__FILE__).'asset/style/theme-circle.css' );break;	
+	 case '3':wp_enqueue_style( 'theme-nature', plugin_dir_url(__FILE__).'asset/style/theme-nature.css' );break;	
 	}
-	
-	
 	
 	
 	
 		
 	// Ajout script
 	
-	wp_enqueue_style( 'colorbox-css', plugins_url('teamchart-free/asset/style/colorbox.css', dirname(__FILE__)) );
-	wp_enqueue_script( 'colorbox-js', plugins_url('teamchart-free/asset/js/jquery.colorbox.js', dirname(__FILE__)),array('jquery'),"2.1.5",true);
+	wp_enqueue_style( 'colorbox-css', plugin_dir_url(__FILE__).'asset/style/colorbox.css' );
+	wp_enqueue_script( 'colorbox-js', plugin_dir_url(__FILE__).'asset/js/jquery.colorbox.js',array('jquery'),"2.1.5",true);
 	add_action('wp_footer','colorbox_script_free');
 	
 	// Read Chart
