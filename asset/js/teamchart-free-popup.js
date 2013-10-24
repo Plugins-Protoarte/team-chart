@@ -2,6 +2,14 @@
 	
 	function init () {
 		
+		jQuery( "#loading" ).hide();
+		jQuery( document ).ajaxStart(function() {
+		  jQuery( "#loading" ).show();
+		});
+		
+		jQuery( document ).ajaxComplete(function() {
+		   jQuery( "#loading" ).hide();
+		});
 		
 var data = { type: 'graphchart', action: 'graphchart',chartid : 1};
 					jQuery.ajax({type: "POST", url: ajaxurl, data: data,
@@ -241,11 +249,15 @@ var data = { type: 'graphchart', action: 'graphchart',chartid : 1};
 				
 										
 				// Add node in Chart
-				if (jQuery("#org li").is('#first'))
-					jQuery("#org li#first ul:last").append('<li data-id="'+idperson+'">'+person["name"]+'<div class="imgnode"><img src="'+person["media-url"]+'"/></div></li>');
-				else
+				if (jQuery("#org li").is('#first')){
+					if (jQuery("#org li#first ul:last").length!=0)
+						jQuery("#org li#first ul:last").append('<li data-id="'+idperson+'">'+person["name"]+'<div class="imgnode"><img src="'+person["media-url"]+'"/></div></li>');
+					else
+						jQuery("#org li#first").append('<ul><li data-id="'+idperson+'">'+person["name"]+'<div class="imgnode"><img src="'+person["media-url"]+'"/></div></li></ul>');
+				}
+				else {
 					jQuery("#org").append('<li id="first" data-id="'+idperson+'">'+person["name"]+'<div class="imgnode"><img src="'+person["media-url"]+'"/></div><ul></ul></li>');
-							
+				}	
 				updatePosition();
 				graphChart();   
 				updateDB();								

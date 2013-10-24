@@ -35,8 +35,18 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 	    		
            	
            		 $image = wp_get_image_editor( $urlimage[0] );
-					if ( ! is_wp_error( $image ) ) {
-						$resize=$image->resize( 182, 182, true );										
+				if ( ! is_wp_error( $image ) ) {
+						//$image->update_size( ($size["width"]*3), ($size["height"]*3));
+						$resize=$image->resize( 182, 182, true );							
+						// If resize FAIL
+						if (is_wp_error($resize) == true) {						
+							$size=$image->get_size();	
+							if ($size["width"]>$size["height"])
+								$origin=$size["height"];
+							else
+								$origin=$size["width"];
+							$crop=$image->crop( 0, 0, $origin, $origin, 182, 182, false );							
+						}
 						$sourceImgPath = get_attached_file($row->mediaid);
 						$_filepath = generateFilename($sourceImgPath, 182, 182);
 						$_filepath_info = pathinfo($_filepath);						
@@ -48,7 +58,7 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 						$_new_meta['crop'] = "cropped";					
 						$post_metadata['sizes'][$_imageSize->name] = $_new_meta;
 						wp_update_attachment_metadata( $row->mediaid, $post_metadata);																							
-						$urlimage=wp_get_attachment_image_src($row->mediaid,array(182,182));	
+						$urlimage=wp_get_attachment_image_src($row->mediaid,array(182,182));			
 					}
 	    	
 	    	}
@@ -93,7 +103,17 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
            	
            		 $image = wp_get_image_editor( $urlimage[0] );
 					if ( ! is_wp_error( $image ) ) {
-						$resize=$image->resize( 182, 182, true );										
+						//$image->update_size( ($size["width"]*3), ($size["height"]*3));
+						$resize=$image->resize( 182, 182, true );							
+						// If resize FAIL
+						if (is_wp_error($resize) == true) {						
+							$size=$image->get_size();	
+							if ($size["width"]>$size["height"])
+								$origin=$size["height"];
+							else
+								$origin=$size["width"];
+							$crop=$image->crop( 0, 0, $origin, $origin, 182, 182, false );							
+						}
 						$sourceImgPath = get_attached_file($row->mediaid);
 						$_filepath = generateFilename($sourceImgPath, 182, 182);
 						$_filepath_info = pathinfo($_filepath);						
@@ -105,7 +125,7 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 						$_new_meta['crop'] = "cropped";					
 						$post_metadata['sizes'][$_imageSize->name] = $_new_meta;
 						wp_update_attachment_metadata( $row->mediaid, $post_metadata);																							
-						$urlimage=wp_get_attachment_image_src($row->mediaid,array(182,182));	
+						$urlimage=wp_get_attachment_image_src($row->mediaid,array(182,182));			
 					}
 	    	
 	    	}

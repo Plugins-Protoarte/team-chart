@@ -56,6 +56,7 @@ else {
 	</div>
 	
 	<div id='chartgraph'>
+		<div id="loading"> <?php _e( 'Save', 'teamchart' )?> </div>
 <span class='tips'><?php _e( 'Please select or add chart to build it !', 'teamchart' ) ?> </span>
 	
 	

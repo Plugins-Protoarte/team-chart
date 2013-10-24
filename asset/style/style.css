@@ -358,3 +358,5 @@ padding: 10px 26px 10px 60px;border:1px dotted #3fa39c;}
 .featurepro.center{background:url("../images/featurecrop.png") 5px 50% no-repeat #c3e6e4;
 padding: 20px 26px 20px 60px;margin-bottom:10px;}
 
+#loading {background:#ffffff;opacity:0.7;padding:8px 16px 8px 49px !important;position: absolute;
+right: 10px;}
