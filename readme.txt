@@ -18,7 +18,7 @@ Members can be classified with drag’n drop vertically and horizontally and you
 
 This plugin will be perfect in addition with contact form or an about us page on your website.
 
-**More details here:** http://www.wpcode-united.com/wordpress-plugin/team-chart
+**More details here:** http://www.wpcode-united.com/wordpress-plugin/team-chart      
 **Live demo:** http://www.wpcode-united.com/demo/team-chart-pro/default-theme
 
 **Video demo:** [vimeo https://vimeo.com/75430850]
