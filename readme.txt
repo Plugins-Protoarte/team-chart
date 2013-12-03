@@ -3,7 +3,7 @@ Contributors: WPCode United
 Donate link: 
 Tags: team chart, flow chart, organizational chart, AJAX, links, page, post, contact form, about us, contact us
 Requires at least: 3.5
-Tested up to: 3.6.1
+Tested up to: 3.7.1
 Stable tag: /trunk 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -67,6 +67,8 @@ Just open you content and you'll a button named "Team Chart" at the top left of 
 8. Choose your theme
 
 == Changelog ==
+
+* #1.0.3 : Fixed charset utf8 in the person details
 
 * #1.0.2 : Add a trigger when data was saved by Ajax.
 

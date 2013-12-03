@@ -4,7 +4,7 @@ Plugin Name: Team Chart Free
 Plugin URI: http://www.wpcode-united.com/wordpress-plugin/team-chart
 Description: Team Chart is a plugin that helps you to create flow chart easily. Upload images, description and organize members with drag’n drop.
 Author: WPCode United
-Version: 1.0.2
+Version: 1.0.3
 Author URI: http://www.wpcode-united.com
 */
 
@@ -15,7 +15,7 @@ require_once(plugin_dir_path(__FILE__)."/include/admin/teamchart-free-admin-ajax
            
 
 global $team_chart_free_version;
-$team_chart_free_version = "1.0.2";
+$team_chart_free_version = "1.0.3";
 
 function team_chart_install_free() {
 	
@@ -34,7 +34,8 @@ function team_chart_install_free() {
   description text NULL,
   mediaid VARCHAR(150) DEFAULT '' NOT NULL,
   UNIQUE KEY id (id)
-    );";
+    )  CHARACTER SET utf8
+	;";
    dbDelta( $sql );
    
    
@@ -45,7 +46,8 @@ function team_chart_install_free() {
   name tinytext NOT NULL,
   theme mediumint(9) DEFAULT '1' NULL,
   UNIQUE KEY id (id)
-    );";
+    ) CHARACTER SET utf8
+	;";
    dbDelta( $sql );
       
 	if($wpdb->insert($table_name_chart,array('name'=>'teamchart','theme'=>"1"))===FALSE){
@@ -62,7 +64,8 @@ function team_chart_install_free() {
   parent mediumint(9) DEFAULT '-1' NULL,
   pos mediumint(9) NULL,
   UNIQUE KEY (idchart, idperson)
-    );";
+    ) CHARACTER SET utf8
+	;";
    dbDelta( $sql );
    
  
