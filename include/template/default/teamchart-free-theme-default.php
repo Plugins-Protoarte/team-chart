@@ -3,12 +3,12 @@
 
 global $wpdb;
 $table_name = $wpdb->prefix . "team_chart_person, ".$wpdb->prefix . "team_chart_assoc";
-$myrows = $wpdb->get_results("SELECT p.id, p.name, p.job, p.description, p.mediaid, a.parent, a.pos FROM wp_team_chart_person p
-INNER JOIN  wp_team_chart_assoc a
+$myrows = $wpdb->get_results("SELECT p.id, p.name, p.job, p.description, p.mediaid, a.parent, a.pos FROM ".$wpdb->prefix."team_chart_person p
+INNER JOIN  ".$wpdb->prefix."team_chart_assoc a
 ON p.id = a.idperson
  AND a.idchart = $id 
  ORDER BY a.parent ASC, a.pos ASC");
- 
+
   $nbparent=0;
       foreach ($myrows as $row)
  	 {

@@ -48,7 +48,7 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 							$crop=$image->crop( 0, 0, $origin, $origin, 182, 182, false );							
 						}
 						$sourceImgPath = get_attached_file($row->mediaid);
-						$_filepath = generateFilename($sourceImgPath, 182, 182);
+						$_filepath = generateFilename_free($sourceImgPath, 182, 182);
 						$_filepath_info = pathinfo($_filepath);						
 						$image->save($_filepath);												
 						$_new_meta = array(
@@ -74,11 +74,11 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 	    	 	
 	    	 	
 	    	    $result.= "'>	<div class='person'>
-	    	 	  <div class='image'> <img src='".$urlimage[0]."' alt='".htmlentities(stripslashes($row->name),ENT_QUOTES)."' /></div>
-	    	 	  <div class='imagefull' style='display:none;'> <img src='".$urlimagefull[0]."' alt='".htmlentities(stripslashes($row->name),ENT_QUOTES)."' /></div>
-	    	 	  <div class='text'><div class='name'><p> ".htmlentities(stripslashes($row->name),ENT_QUOTES)." </p></div>
-	    	 	  <div class='Job'> ".htmlentities(stripslashes($row->job),ENT_QUOTES)."</div>
-	    	 	  <div class='description' style='display:none;'> ".htmlentities(stripslashes($row->description),ENT_QUOTES)."</div>
+	    	 	  <div class='image'> <img src='".$urlimage[0]."' alt='".htmlspecialchars(stripslashes($row->name),ENT_NOQUOTES)."' /></div>
+	    	 	  <div class='imagefull' style='display:none;'> <img src='".$urlimagefull[0]."' alt='".htmlspecialchars(stripslashes($row->name),ENT_NOQUOTES)."' /></div>
+	    	 	  <div class='text'><div class='name'><p> ".htmlspecialchars(stripslashes($row->name),ENT_NOQUOTES)." </p></div>
+	    	 	  <div class='Job'> ".htmlspecialchars(stripslashes($row->job),ENT_NOQUOTES)."</div>
+	    	 	  <div class='description' style='display:none;'> ".htmlspecialchars(stripslashes($row->description),ENT_NOQUOTES)."</div>
 	    	 	  </div>
 	    	 	  </div>
 	    	 	  ";
@@ -115,7 +115,7 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 							$crop=$image->crop( 0, 0, $origin, $origin, 182, 182, false );							
 						}
 						$sourceImgPath = get_attached_file($row->mediaid);
-						$_filepath = generateFilename($sourceImgPath, 182, 182);
+						$_filepath = generateFilename_free($sourceImgPath, 182, 182);
 						$_filepath_info = pathinfo($_filepath);						
 						$image->save($_filepath);												
 						$_new_meta = array(
@@ -140,11 +140,11 @@ function build_chart_free($myrows,$parent=-1,$count,$largeur=0,$nbparent=1,$pare
 	    	 	
 	    	 	
 	    	    $result.= "'>	<div class='person'>
-	    	 	  <div class='image'> <img src='".$urlimage[0]."' alt='".htmlentities(stripslashes($row->name),ENT_QUOTES)."' /></div>
-	    	 	  <div class='imagefull' style='display:none;'> <img src='".$urlimagefull[0]."' alt='".htmlentities(stripslashes($row->name),ENT_QUOTES)."' /></div>
-	    	 	  <div class='text'><div class='name'><p> ".htmlentities(stripslashes($row->name),ENT_QUOTES)." </p></div>
-	    	 	  <div class='Job'> ".htmlentities(stripslashes($row->job),ENT_QUOTES)."</div>
-	    	 	  <div class='description' style='display:none;'> ".htmlentities(stripslashes($row->description),ENT_QUOTES)."</div>
+	    	 	  <div class='image'> <img src='".$urlimage[0]."' alt='".htmlspecialchars(stripslashes($row->name),ENT_NOQUOTES)."' /></div>
+	    	 	  <div class='imagefull' style='display:none;'> <img src='".$urlimagefull[0]."' alt='".htmlspecialchars(stripslashes($row->name),ENT_NOQUOTES)."' /></div>
+	    	 	  <div class='text'><div class='name'><p> ".htmlspecialchars(stripslashes($row->name),ENT_NOQUOTES)." </p></div>
+	    	 	  <div class='Job'> ".htmlspecialchars(stripslashes($row->job),ENT_NOQUOTES)."</div>
+	    	 	  <div class='description' style='display:none;'> ".htmlspecialchars(stripslashes($row->description),ENT_NOQUOTES)."</div>
 	    	 	  </div>
 	    	 	  </div>
 	    	 	  ";
@@ -182,9 +182,7 @@ function count_children_free($myrows,$id) {
 		  return $i;
 }
 	
-
-
-
+ 
 
 
 ?>

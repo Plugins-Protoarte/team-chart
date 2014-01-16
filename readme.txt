@@ -1,4 +1,4 @@
-﻿=== Team Chart ===
+=== Team Chart ===
 Contributors: WPCode United
 Donate link: 
 Tags: team chart, flow chart, organizational chart, AJAX, links, page, post, contact form, about us, contact us
@@ -68,7 +68,9 @@ Just open you content and you'll a button named "Team Chart" at the top left of 
 
 == Changelog ==
 
-* #1.0.3 : Fixed charset utf8 in the person details
+* #1.0.4 : Fixed fatal error and accent.
+
+* #1.0.3 : Fixed charset utf8 in the person details.
 
 * #1.0.2 : Add a trigger when data was saved by Ajax.
 

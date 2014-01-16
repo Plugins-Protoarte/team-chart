@@ -483,17 +483,6 @@ function croppingimage_function_free() {
 add_action('wp_ajax_croppingimage', 'croppingimage_function_free');
 
 
-function generateFilename_free( $file, $w, $h ){
-		$info = pathinfo($file);
-		$dir = $info['dirname'];
-		$ext = $info['extension'];
-		$name = wp_basename($file, ".$ext");
-		$suffix = "{$w}x{$h}";
-		$destfilename = "{$dir}/{$name}-{$suffix}.{$ext}";
-		
-		return $destfilename;
-}
-
 
 
 
@@ -555,25 +544,25 @@ function build_menu_free($myrows,$parent=-1)
 	    	
 	    	 if ($parent==-1){
 	    	 	$result.= "<li id='first'
-	    	 	 data-id='".htmlentities(stripslashes($row->id),ENT_QUOTES)."'
-	    	 	 data-name='".htmlentities(stripslashes($row->name),ENT_QUOTES)."'
-	    	 	 data-job='".htmlentities(stripslashes($row->job),ENT_QUOTES)."'
-	    	 	 data-description='".htmlentities(stripslashes($row->description),ENT_QUOTES)."'
+	    	 	 data-id='".htmlspecialchars(stripslashes($row->id),ENT_QUOTES)."'
+	    	 	 data-name='".htmlspecialchars(stripslashes($row->name),ENT_QUOTES)."'
+	    	 	 data-job='".htmlspecialchars(stripslashes($row->job),ENT_QUOTES)."'
+	    	 	 data-description='".htmlspecialchars(stripslashes(($row->description)),ENT_QUOTES)."'
 	    	 	 data-mediaid='".htmlentities(stripslashes($row->mediaid),ENT_QUOTES)."'
 	    	 	 data-mediaurl='".$urlimage[0]."'
 	    	 	 data-parent='".$row->parent."'
 	    	 	 data-pos='".$row->pos."'
-	    	 	 >".htmlentities(stripslashes($row->name),ENT_QUOTES)."<div class='imgnode'><img src='".$urlimage[0]."'/></div>";
+	    	 	 >".htmlspecialchars(stripslashes($row->name),ENT_QUOTES)."<div class='imgnode'><img src='".$urlimage[0]."'/></div>";
 	    	 }
 	    	 else {
 	    	 	$result.= "<li data-id='".$row->id."'
-	    	 	 data-name='".htmlentities(stripslashes(($row->name)),ENT_QUOTES)."'
-	    	 	 data-job='".htmlentities(stripslashes(($row->job)),ENT_QUOTES)."'
-	    	 	 data-description='".htmlentities(stripslashes(($row->description)),ENT_QUOTES)."'
+	    	 	 data-name='".htmlspecialchars(stripslashes(($row->name)),ENT_QUOTES)."'
+	    	 	 data-job='".htmlspecialchars(stripslashes(($row->job)),ENT_QUOTES)."'
+	    	 	 data-description='".htmlspecialchars(stripslashes(($row->description)),ENT_QUOTES)."'
 	    	 	 data-mediaid='".$row->mediaid."'
 	    	 	 data-mediaurl='".$urlimage[0]."'
 	    	 	 data-parent='".$row->parent."'
-	    	 	 data-pos='".$row->pos."'>".htmlentities(stripslashes(($row->name)),ENT_QUOTES)."<div class='imgnode'><img src='".$urlimage[0]."'/></div>";
+	    	 	 data-pos='".$row->pos."'>".htmlspecialchars(stripslashes(($row->name)),ENT_QUOTES)."<div class='imgnode'><img src='".$urlimage[0]."'/></div>";
 	    	 }
 	      if (has_children_free($myrows,$row->id))
 	        $result.= build_menu_free($myrows,$row->id);

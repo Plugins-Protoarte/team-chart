@@ -4,7 +4,7 @@ Plugin Name: Team Chart Free
 Plugin URI: http://www.wpcode-united.com/wordpress-plugin/team-chart
 Description: Team Chart is a plugin that helps you to create flow chart easily. Upload images, description and organize members with drag’n drop.
 Author: WPCode United
-Version: 1.0.3
+Version: 1.0.4
 Author URI: http://www.wpcode-united.com
 */
 
@@ -15,7 +15,7 @@ require_once(plugin_dir_path(__FILE__)."/include/admin/teamchart-free-admin-ajax
            
 
 global $team_chart_free_version;
-$team_chart_free_version = "1.0.3";
+$team_chart_free_version = "1.0.4";
 
 function team_chart_install_free() {
 	
@@ -135,10 +135,25 @@ function reset_session() {
 add_action('wp_logout', 'reset_session');
 
 
+        function generateFilename_free( $file, $w, $h ){
+                $info = pathinfo($file);
+                $dir = $info['dirname'];
+                $ext = $info['extension'];
+                $name = wp_basename($file, ".$ext");
+                $suffix = "{$w}x{$h}";
+                $destfilename = "{$dir}/{$name}-{$suffix}.{$ext}";
+                
+                return $destfilename;
+        }
+
+
+
 /**
  *  Shortcode Frontend
  */
 function teamchart_shortcode_free( $atts ) {
+	
+	
 	
 	extract( shortcode_atts( array(
 		'id' => 'teamchart'
@@ -158,8 +173,9 @@ function teamchart_shortcode_free( $atts ) {
 	global $wpdb;
 	
 	$table_name = $wpdb->prefix . "team_chart";
-	$classtheme = $wpdb->get_row( "SELECT theme FROM ".$table_name." WHERE id=".$id);
+	$classtheme = $wpdb->get_row( "SELECT theme FROM ".$table_name." WHERE id='".$id."'");
 	
+
 	switch($classtheme->theme){
 	 case '1':$prefixtheme="default";break;	
 	 case '2':$prefixtheme="circle";break;	
